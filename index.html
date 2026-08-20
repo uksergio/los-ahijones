@@ -14,7 +14,7 @@
 
     <meta
         name="description"
-        content="Noticias, novedades e información sobre Los Ahijones, Madrid."
+        content="Información, actualidad y desarrollo de Los Ahijones, Madrid."
     >
 
     <link rel="stylesheet" href="style.css">
@@ -25,34 +25,30 @@
 <body>
 
 
-    <!-- =====================================================
+    <!-- =========================
          HEADER
-    ====================================================== -->
+    ========================== -->
 
     <header class="site-header">
 
         <div class="header-inner">
 
-
-            <!-- BRAND -->
-
             <a
-                href="#top"
-                class="brand"
-                aria-label="Los Ahijones Radar"
+                href="#"
+                class="logo"
             >
 
-                <span class="brand-symbol">
+                <span class="logo-a">
                     A
                 </span>
 
-                <span class="brand-copy">
+                <span class="logo-text">
 
-                    <span class="brand-name">
+                    <strong>
                         LOS AHIJONES
-                    </span>
+                    </strong>
 
-                    <span class="brand-radar">
+                    <span>
                         RADAR
                     </span>
 
@@ -61,12 +57,10 @@
             </a>
 
 
-            <!-- NAVIGATION -->
-
             <nav class="main-nav">
 
                 <a
-                    href="#top"
+                    href="#"
                     class="active"
                 >
                     Inicio
@@ -76,16 +70,12 @@
                     Noticias
                 </a>
 
-                <a href="#sources">
+                <a href="#">
                     Fuentes
                 </a>
 
-                <a href="#map">
+                <a href="#">
                     Mapa
-                </a>
-
-                <a href="#about">
-                    Acerca de
                 </a>
 
             </nav>
@@ -93,25 +83,17 @@
         </div>
 
 
-        <!-- TAGLINE -->
+        <div class="brand-line">
 
-        <div class="header-tagline">
-
-            <span>
-                INFORMACIÓN
-            </span>
+            <span>INFORMACIÓN</span>
 
             <i></i>
 
-            <span>
-                ACTUALIDAD
-            </span>
+            <span>ACTUALIDAD</span>
 
             <i></i>
 
-            <span>
-                DESARROLLO
-            </span>
+            <span>DESARROLLO</span>
 
         </div>
 
@@ -119,27 +101,28 @@
 
 
 
-    <!-- =====================================================
+    <!-- =========================
          MAIN
-    ====================================================== -->
+    ========================== -->
 
-    <main
-        class="container"
-        id="top"
-    >
+    <main class="main-container">
 
 
         <!-- INTRO -->
 
-        <section class="welcome">
+        <section class="intro">
 
-            <div>
+            <div class="intro-copy">
 
-                <h2>
+                <p class="section-label">
+                    LOS AHIJONES · MADRID
+                </p>
+
+                <h1>
                     Últimas <span>novedades</span>
-                </h2>
+                </h1>
 
-                <p>
+                <p class="intro-description">
                     Información publicada sobre el desarrollo
                     de Los Ahijones.
                 </p>
@@ -147,9 +130,9 @@
             </div>
 
 
-            <div class="update-information">
+            <div class="status">
 
-                <div class="update-status">
+                <div class="status-main">
 
                     <span class="status-dot"></span>
 
@@ -157,8 +140,8 @@
 
                 </div>
 
-                <div class="last-update">
-                    Actualizado recientemente
+                <div class="status-date">
+                    Actualización automática
                 </div>
 
             </div>
@@ -167,54 +150,43 @@
 
 
 
-        <!-- =================================================
-             STATISTICS
-        ================================================== -->
+        <!-- STATISTICS -->
 
-        <section class="stats">
+        <section class="statistics">
 
-            <div class="stat-card">
+            <div class="stat">
 
-                <span
-                    class="stat-number"
-                    id="total-news"
-                >
+                <strong id="total-news">
                     0
-                </span>
+                </strong>
 
-                <span class="stat-label">
+                <span>
                     Publicaciones
                 </span>
 
             </div>
 
 
-            <div class="stat-card">
+            <div class="stat">
 
-                <span
-                    class="stat-number"
-                    id="new-news"
-                >
+                <strong id="new-news">
                     0
-                </span>
+                </strong>
 
-                <span class="stat-label">
+                <span>
                     Nuevas
                 </span>
 
             </div>
 
 
-            <div class="stat-card">
+            <div class="stat">
 
-                <span
-                    class="stat-number"
-                    id="source-count"
-                >
+                <strong id="source-count">
                     0
-                </span>
+                </strong>
 
-                <span class="stat-label">
+                <span>
                     Fuentes
                 </span>
 
@@ -224,15 +196,13 @@
 
 
 
-        <!-- =================================================
-             FILTERS
-        ================================================== -->
+        <!-- FILTERS -->
 
         <section class="filters">
 
-            <div class="search-wrapper">
+            <div class="search-box">
 
-                <span class="search-icon">
+                <span class="search-symbol">
                     ⌕
                 </span>
 
@@ -240,7 +210,7 @@
                     type="search"
                     id="search"
                     placeholder="Buscar en Los Ahijones..."
-                    aria-label="Buscar en Los Ahijones"
+                    aria-label="Buscar"
                 >
 
             </div>
@@ -248,7 +218,7 @@
 
             <select
                 id="category"
-                aria-label="Filtrar por categoría"
+                aria-label="Categoría"
             >
 
                 <option value="all">
@@ -293,98 +263,12 @@
 
 
 
-        <!-- =================================================
-             NEWS
-        ================================================== -->
+        <!-- NEWS -->
 
         <section
             id="news-feed"
-            aria-label="Noticias de Los Ahijones"
+            class="news-feed"
         >
-
-            <!--
-                News cards are generated automatically
-                by app.js from data/news.json.
-            -->
-
-        </section>
-
-
-
-        <!-- =================================================
-             FUTURE SOURCES SECTION
-        ================================================== -->
-
-        <section
-            id="sources"
-            class="future-section"
-        >
-
-            <span class="section-kicker">
-                FUENTES
-            </span>
-
-            <h2>
-                Fuentes monitorizadas
-            </h2>
-
-            <p>
-                Aquí aparecerán las fuentes utilizadas para
-                detectar nuevas publicaciones sobre Los Ahijones.
-            </p>
-
-        </section>
-
-
-
-        <!-- =================================================
-             FUTURE MAP SECTION
-        ================================================== -->
-
-        <section
-            id="map"
-            class="future-section"
-        >
-
-            <span class="section-kicker">
-                MAPA
-            </span>
-
-            <h2>
-                Los Ahijones
-            </h2>
-
-            <p>
-                Próximamente podremos incorporar aquí un mapa
-                del ámbito y sus principales desarrollos.
-            </p>
-
-        </section>
-
-
-
-        <!-- =================================================
-             ABOUT
-        ================================================== -->
-
-        <section
-            id="about"
-            class="future-section about-section"
-        >
-
-            <span class="section-kicker">
-                ACERCA DE
-            </span>
-
-            <h2>
-                Los Ahijones Radar
-            </h2>
-
-            <p>
-                Proyecto personal para recopilar, organizar y
-                consultar información pública relacionada con
-                el desarrollo de Los Ahijones, Madrid.
-            </p>
 
         </section>
 
@@ -393,27 +277,31 @@
 
 
 
-    <!-- =====================================================
+    <!-- =========================
          FOOTER
-    ====================================================== -->
+    ========================== -->
 
-    <footer>
+    <footer class="site-footer">
 
-        <div class="footer-brand">
+        <div class="footer-inner">
 
-            <span class="footer-symbol">
-                A
-            </span>
+            <div class="footer-logo">
+
+                <span class="logo-a small">
+                    A
+                </span>
+
+                <span>
+                    LOS AHIJONES RADAR
+                </span>
+
+            </div>
 
             <span>
-                LOS AHIJONES RADAR
+                Proyecto personal · Madrid
             </span>
 
         </div>
-
-        <p>
-            Proyecto personal · Madrid
-        </p>
 
     </footer>
 
