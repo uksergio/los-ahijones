@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Los Ahijones Radar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-content">
+            <div>
+                <div class="eyebrow">MADRID · UZPp 2.03</div>
+                <h1>Los Ahijones Radar</h1>
+                <p>Noticias, novedades e información sobre Los Ahijones</p>
+            </div>
+
+            <div class="header-icon">🏙️</div>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <section class="welcome">
+            <div>
+                <h2>Últimas novedades</h2>
+                <p>
+                    Información publicada sobre el desarrollo de Los Ahijones.
+                </p>
+            </div>
+
+            <div class="update-status">
+                <span class="status-dot"></span>
+                Radar activo
+            </div>
+        </section>
+
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="stat-number" id="total-news">0</span>
+                <span class="stat-label">Publicaciones</span>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-number" id="new-news">0</span>
+                <span class="stat-label">Nuevas</span>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-number">0</span>
+                <span class="stat-label">Fuentes</span>
+            </div>
+
+        </section>
+
+
+        <section class="filters">
+
+            <input
+                type="search"
+                id="search"
+                placeholder="Buscar en Los Ahijones..."
+            >
+
+            <select id="category">
+                <option value="all">Todas las categorías</option>
+                <option value="urbanismo">Urbanismo</option>
+                <option value="vivienda">Vivienda</option>
+                <option value="obras">Obras</option>
+                <option value="transporte">Transporte</option>
+                <option value="equipamientos">Equipamientos</option>
+                <option value="administracion">Administración</option>
+                <option value="empresas">Empresas</option>
+            </select>
+
+        </section>
+
+
+        <section id="news-feed">
+
+            <article class="news-card">
+
+                <div class="news-meta">
+                    <span class="category-badge">PROYECTO</span>
+                    <span>Los Ahijones Radar</span>
+                </div>
+
+                <h3>
+                    Bienvenido a Los Ahijones Radar
+                </h3>
+
+                <p>
+                    Este será tu centro personal de información sobre
+                    Los Ahijones. Aquí aparecerán noticias, anuncios,
+                    proyectos, obras, transporte y cualquier otra
+                    información relevante.
+                </p>
+
+                <div class="news-footer">
+                    <span>20 agosto 2026</span>
+                    <span>Primer registro</span>
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Los Ahijones Radar · Proyecto personal · Madrid
+        </p>
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
