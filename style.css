@@ -4,40 +4,35 @@
 ========================================================= */
 
 
-/* =========================
-   COLOURS
-========================= */
+/* =========================================================
+   VARIABLES
+========================================================= */
 
 :root {
 
-    --black: #0b0d0c;
-
-    --black-soft: #151917;
+    --black: #111312;
+    --black-2: #191c1a;
 
     --green-dark: #174d3a;
-
-    --green: #28654b;
-
+    --green: #286348;
     --green-bright: #9be51b;
-
-    --green-pale: #edf4ef;
+    --green-soft: #eaf2ed;
 
     --white: #ffffff;
+    --background: #f7f8f7;
 
-    --background: #f8f9f8;
-
-    --text: #151817;
-
+    --text: #171a18;
     --muted: #707873;
 
-    --border: #e1e5e2;
+    --border: #e0e4e1;
 
+    --content-width: 1120px;
 }
 
 
-/* =========================
+/* =========================================================
    RESET
-========================= */
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -70,17 +65,15 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
 .site-header {
 
     background: var(--black);
 
-    color: var(--white);
-
-    padding: 0 40px;
+    color: white;
 
     border-bottom: 3px solid var(--green-bright);
 
@@ -89,9 +82,12 @@ body {
 
 .header-inner {
 
-    max-width: 1180px;
+    width: min(
+        calc(100% - 48px),
+        var(--content-width)
+    );
 
-    height: 92px;
+    height: 88px;
 
     margin: 0 auto;
 
@@ -104,9 +100,9 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    LOGO
-========================= */
+========================================================= */
 
 .logo {
 
@@ -114,7 +110,7 @@ body {
 
     align-items: center;
 
-    gap: 13px;
+    gap: 14px;
 
     color: white;
 
@@ -123,13 +119,19 @@ body {
 }
 
 
-.logo-a {
+/*
+   Simple original A mark.
+   Inspired by the visual language of Vive Ahijones,
+   but not copying its logo.
+*/
+
+.logo-symbol {
 
     position: relative;
 
-    width: 48px;
+    width: 44px;
 
-    height: 55px;
+    height: 52px;
 
     display: flex;
 
@@ -139,43 +141,41 @@ body {
 
     color: #d0d4d1;
 
-    font-size: 52px;
-
-    line-height: 1;
+    font-size: 48px;
 
     font-weight: 300;
 
     font-style: italic;
 
+    line-height: 1;
+
 }
 
 
-/* Green sweep */
-
-.logo-a::after {
+.logo-symbol::after {
 
     content: "";
 
     position: absolute;
 
-    width: 42px;
+    width: 43px;
 
     height: 13px;
 
-    left: 4px;
+    left: 1px;
 
-    bottom: 8px;
+    bottom: 5px;
 
     border-bottom: 4px solid var(--green-bright);
 
     border-radius: 50%;
 
-    transform: rotate(-13deg);
+    transform: rotate(-14deg);
 
 }
 
 
-.logo-text {
+.logo-copy {
 
     display: flex;
 
@@ -184,39 +184,41 @@ body {
 }
 
 
-.logo-text strong {
+.logo-name {
 
-    color: #d8dcda;
+    color: #d9ddda;
 
-    font-size: 20px;
+    font-size: 19px;
 
     font-weight: 500;
 
-    letter-spacing: 2px;
+    letter-spacing: 2.2px;
 
     line-height: 1;
 
 }
 
 
-.logo-text span {
+.logo-radar {
 
     margin-top: 7px;
 
     color: var(--green-bright);
 
-    font-size: 13px;
+    font-size: 12px;
 
-    font-weight: 500;
+    font-weight: 600;
 
-    letter-spacing: 5px;
+    letter-spacing: 4px;
+
+    line-height: 1;
 
 }
 
 
-/* =========================
+/* =========================================================
    NAVIGATION
-========================= */
+========================================================= */
 
 .main-nav {
 
@@ -224,7 +226,7 @@ body {
 
     align-items: center;
 
-    gap: 34px;
+    gap: 30px;
 
 }
 
@@ -233,21 +235,19 @@ body {
 
     position: relative;
 
-    padding: 37px 0;
+    padding: 34px 0;
 
-    color: #aeb5b1;
+    color: #aeb6b1;
 
     text-decoration: none;
 
-    font-size: 12px;
+    font-size: 11px;
 
-    font-weight: 500;
+    font-weight: 600;
 
     text-transform: uppercase;
 
     letter-spacing: 0.8px;
-
-    transition: color 0.2s ease;
 
 }
 
@@ -276,7 +276,7 @@ body {
 
     right: 0;
 
-    bottom: 25px;
+    bottom: 21px;
 
     height: 2px;
 
@@ -285,36 +285,39 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    BRAND LINE
-========================= */
+========================================================= */
 
 .brand-line {
 
-    max-width: 1180px;
+    width: min(
+        calc(100% - 48px),
+        var(--content-width)
+    );
 
     margin: 0 auto;
 
-    padding: 0 0 23px;
+    padding-bottom: 20px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 10px;
+    gap: 9px;
 
-    color: #858e89;
+    color: #818a85;
 
     font-size: 9px;
 
     font-weight: 600;
 
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
 
 }
 
 
-.brand-line i {
+.brand-dot {
 
     width: 4px;
 
@@ -327,34 +330,37 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    MAIN
-========================= */
+========================================================= */
 
 .main-container {
 
-    max-width: 1180px;
+    width: min(
+        calc(100% - 48px),
+        var(--content-width)
+    );
 
     margin: 0 auto;
 
-    padding: 58px 30px 80px;
+    padding: 52px 0 70px;
 
 }
 
 
-/* =========================
+/* =========================================================
    INTRO
-========================= */
+========================================================= */
 
 .intro {
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: flex-end;
 
-    padding-bottom: 30px;
+    justify-content: space-between;
+
+    padding-bottom: 28px;
 
     border-bottom: 1px solid var(--border);
 
@@ -363,7 +369,7 @@ body {
 
 .section-label {
 
-    margin: 0 0 12px;
+    margin-bottom: 10px;
 
     color: var(--green);
 
@@ -382,7 +388,7 @@ body {
 
     color: var(--black);
 
-    font-size: 42px;
+    font-size: 40px;
 
     font-weight: 700;
 
@@ -400,9 +406,9 @@ body {
 }
 
 
-.intro-description {
+.intro-copy > p {
 
-    margin: 12px 0 0;
+    margin: 11px 0 0;
 
     color: var(--muted);
 
@@ -411,9 +417,9 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    STATUS
-========================= */
+========================================================= */
 
 .status {
 
@@ -434,18 +440,18 @@ body {
 
     color: var(--text);
 
-    font-size: 12px;
+    font-size: 11px;
 
-    font-weight: 650;
+    font-weight: 700;
 
 }
 
 
 .status-dot {
 
-    width: 8px;
+    width: 7px;
 
-    height: 8px;
+    height: 7px;
 
     border-radius: 50%;
 
@@ -465,9 +471,9 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    STATISTICS
-========================= */
+========================================================= */
 
 .statistics {
 
@@ -482,7 +488,7 @@ body {
 
 .stat {
 
-    padding: 25px 0;
+    padding: 24px 0;
 
     border-right: 1px solid var(--border);
 
@@ -492,7 +498,7 @@ body {
 .stat:nth-child(2),
 .stat:nth-child(3) {
 
-    padding-left: 30px;
+    padding-left: 28px;
 
 }
 
@@ -510,7 +516,7 @@ body {
 
     color: var(--black);
 
-    font-size: 31px;
+    font-size: 30px;
 
     font-weight: 700;
 
@@ -523,7 +529,7 @@ body {
 
     display: block;
 
-    margin-top: 8px;
+    margin-top: 7px;
 
     color: var(--muted);
 
@@ -531,16 +537,16 @@ body {
 
     font-weight: 700;
 
-    text-transform: uppercase;
+    letter-spacing: 1.4px;
 
-    letter-spacing: 1.5px;
+    text-transform: uppercase;
 
 }
 
 
-/* =========================
+/* =========================================================
    FILTERS
-========================= */
+========================================================= */
 
 .filters {
 
@@ -548,9 +554,9 @@ body {
 
     grid-template-columns: 2fr 1fr;
 
-    gap: 14px;
+    gap: 12px;
 
-    padding: 27px 0 25px;
+    padding: 25px 0;
 
 }
 
@@ -562,7 +568,7 @@ body {
 }
 
 
-.search-symbol {
+.search-icon {
 
     position: absolute;
 
@@ -572,9 +578,9 @@ body {
 
     transform: translateY(-50%);
 
-    color: #727a75;
+    color: #7a827d;
 
-    font-size: 19px;
+    font-size: 18px;
 
     pointer-events: none;
 
@@ -586,9 +592,9 @@ body {
 
     width: 100%;
 
-    height: 46px;
+    height: 44px;
 
-    padding: 0 15px;
+    padding: 0 14px;
 
     border: 1px solid var(--border);
 
@@ -609,7 +615,7 @@ body {
 
 .search-box input {
 
-    padding-left: 40px;
+    padding-left: 39px;
 
 }
 
@@ -619,14 +625,15 @@ body {
 
     border-color: var(--green);
 
-    box-shadow: 0 0 0 2px rgba(40, 101, 75, 0.08);
+    box-shadow:
+        0 0 0 2px rgba(23, 77, 58, 0.08);
 
 }
 
 
-/* =========================
+/* =========================================================
    NEWS FEED
-========================= */
+========================================================= */
 
 .news-feed {
 
@@ -639,9 +646,9 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    NEWS CARD
-========================= */
+========================================================= */
 
 .news-card {
 
@@ -653,16 +660,14 @@ body {
 
     border-radius: 3px;
 
-    padding: 26px 30px 22px;
+    padding: 25px 28px 21px;
 
     margin: 0;
 
-    box-shadow: none;
-
     transition:
         border-color 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
 
 }
 
@@ -688,19 +693,19 @@ body {
 
 .news-card:hover {
 
-    border-color: #cbd3ce;
+    border-color: #c8d1cb;
 
     transform: translateY(-1px);
 
     box-shadow:
-        0 8px 24px rgba(11, 13, 12, 0.05);
+        0 8px 22px rgba(17, 19, 18, 0.05);
 
 }
 
 
-/* =========================
+/* =========================================================
    NEWS META
-========================= */
+========================================================= */
 
 .news-meta {
 
@@ -710,7 +715,7 @@ body {
 
     gap: 10px;
 
-    color: #818983;
+    color: #818984;
 
     font-size: 10px;
 
@@ -718,7 +723,7 @@ body {
 
     text-transform: uppercase;
 
-    letter-spacing: 0.8px;
+    letter-spacing: 0.7px;
 
 }
 
@@ -740,9 +745,9 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    NEWS TITLE
-========================= */
+========================================================= */
 
 .news-card h3 {
 
@@ -756,7 +761,7 @@ body {
 
     line-height: 1.3;
 
-    letter-spacing: -0.4px;
+    letter-spacing: -0.35px;
 
 }
 
@@ -765,7 +770,7 @@ body {
 
     margin: 0;
 
-    max-width: 920px;
+    max-width: 900px;
 
     color: var(--muted);
 
@@ -776,25 +781,25 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    NEWS FOOTER
-========================= */
+========================================================= */
 
 .news-footer {
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
 
-    margin-top: 20px;
+    justify-content: space-between;
+
+    margin-top: 19px;
 
     padding-top: 14px;
 
     border-top: 1px solid #edf0ee;
 
-    color: #858c88;
+    color: #858d88;
 
     font-size: 10px;
 
@@ -817,7 +822,7 @@ body {
 
     font-weight: 750;
 
-    padding-bottom: 3px;
+    padding-bottom: 2px;
 
     border-bottom: 2px solid var(--green-bright);
 
@@ -831,9 +836,9 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 .site-footer {
 
@@ -841,14 +846,17 @@ body {
 
     border-top: 3px solid var(--green-bright);
 
-    padding: 28px 30px;
+    padding: 27px 24px;
 
 }
 
 
 .footer-inner {
 
-    max-width: 1180px;
+    width: min(
+        calc(100% - 48px),
+        var(--content-width)
+    );
 
     margin: 0 auto;
 
@@ -865,7 +873,7 @@ body {
 }
 
 
-.footer-logo {
+.footer-brand {
 
     display: flex;
 
@@ -875,40 +883,30 @@ body {
 
     color: #aeb5b1;
 
-    font-size: 10px;
-
-    font-weight: 650;
+    font-weight: 600;
 
     letter-spacing: 1.2px;
 
 }
 
 
-.logo-a.small {
-
-    width: auto;
-
-    height: auto;
+.footer-symbol {
 
     color: var(--green-bright);
 
-    font-size: 22px;
+    font-size: 20px;
+
+    font-style: italic;
 
 }
 
 
-.logo-a.small::after {
-
-    display: none;
-
-}
-
-
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 760px) {
+
 
     .site-header {
 
@@ -919,14 +917,14 @@ body {
 
     .header-inner {
 
-        height: 76px;
+        height: 75px;
 
     }
 
 
-    .logo-a {
+    .logo-symbol {
 
-        width: 38px;
+        width: 37px;
 
         height: 44px;
 
@@ -935,13 +933,13 @@ body {
     }
 
 
-    .logo-a::after {
+    .logo-symbol::after {
 
-        width: 34px;
+        width: 35px;
 
         height: 10px;
 
-        left: 1px;
+        left: 0;
 
         bottom: 5px;
 
@@ -950,7 +948,7 @@ body {
     }
 
 
-    .logo-text strong {
+    .logo-name {
 
         font-size: 15px;
 
@@ -959,7 +957,7 @@ body {
     }
 
 
-    .logo-text span {
+    .logo-radar {
 
         margin-top: 5px;
 
@@ -979,18 +977,22 @@ body {
 
     .brand-line {
 
-        padding-bottom: 18px;
+        width: 100%;
+
+        padding-bottom: 17px;
 
         font-size: 7px;
 
-        letter-spacing: 1.4px;
+        letter-spacing: 1.2px;
 
     }
 
 
     .main-container {
 
-        padding: 38px 18px 55px;
+        width: calc(100% - 36px);
+
+        padding: 38px 0 55px;
 
     }
 
@@ -999,21 +1001,21 @@ body {
 
         display: block;
 
-        padding-bottom: 25px;
+        padding-bottom: 24px;
 
     }
 
 
     .intro h1 {
 
-        font-size: 32px;
+        font-size: 31px;
 
     }
 
 
     .status {
 
-        margin-top: 20px;
+        margin-top: 18px;
 
         text-align: left;
 
@@ -1038,7 +1040,7 @@ body {
     .stat:nth-child(2),
     .stat:nth-child(3) {
 
-        padding: 18px 0;
+        padding: 17px 0;
 
         border-right: none;
 
@@ -1065,7 +1067,7 @@ body {
 
     .news-card {
 
-        padding: 22px 20px 20px;
+        padding: 21px 20px 19px;
 
     }
 
@@ -1090,12 +1092,14 @@ body {
 
         align-items: flex-start;
 
-        gap: 10px;
+        gap: 9px;
 
     }
 
 
     .footer-inner {
+
+        width: 100%;
 
         flex-direction: column;
 
