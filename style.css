@@ -670,3 +670,426 @@ footer {
     }
 
 }
+
+/* =========================================================
+   RADAR BRAND HEADER
+========================================================= */
+
+.header-inner {
+    max-width: 1160px;
+
+    margin: 0 auto;
+
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    color: white;
+
+    text-decoration: none;
+}
+
+
+.brand-symbol {
+    position: relative;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 2px solid #8fda00;
+
+    color: #9bea00;
+
+    font-size: 29px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    font-style: italic;
+
+    transform: skew(-6deg);
+}
+
+
+.brand-symbol::after {
+    content: "";
+
+    position: absolute;
+
+    width: 29px;
+    height: 11px;
+
+    left: 8px;
+    bottom: 8px;
+
+    border-bottom: 2px solid #9bea00;
+
+    border-radius: 50%;
+
+    transform: rotate(-14deg);
+}
+
+
+.brand-copy {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.brand-name {
+    color: #e6e8e6;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    letter-spacing: 2.4px;
+
+    line-height: 1;
+}
+
+
+.brand-radar {
+    margin-top: 7px;
+
+    color: #9bea00;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.main-nav a {
+    position: relative;
+
+    color: #c3c8c4;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+
+    padding: 31px 0;
+}
+
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: white;
+}
+
+
+.main-nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 18px;
+
+    height: 2px;
+
+    background: #9bea00;
+}
+
+
+/* =========================================================
+   TAGLINE
+========================================================= */
+
+.header-tagline {
+    max-width: 1160px;
+
+    margin: 16px auto 0;
+
+    padding-bottom: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #9ea49f;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 2.2px;
+}
+
+
+.header-tagline i {
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #9bea00;
+}
+
+
+/* =========================================================
+   INTRO UPDATE INFORMATION
+========================================================= */
+
+.update-information {
+    text-align: right;
+}
+
+
+.last-update {
+    margin-top: 9px;
+
+    color: #8a918c;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-wrapper {
+    position: relative;
+}
+
+
+.search-icon {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #68716c;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+
+.search-wrapper input {
+    padding-left: 42px !important;
+}
+
+
+/* =========================================================
+   INTRO GREEN WORD
+========================================================= */
+
+.welcome h2 span {
+    color: #6ba600;
+}
+
+
+/* =========================================================
+   FUTURE SECTIONS
+========================================================= */
+
+.future-section {
+    margin-top: 80px;
+
+    padding-top: 55px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.section-kicker {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #6ba600;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.future-section h2 {
+    margin: 0;
+
+    font-size: 28px;
+
+    letter-spacing: -0.7px;
+}
+
+
+.future-section p {
+    max-width: 700px;
+
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-brand {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #c7ccc8;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+
+.footer-symbol {
+    color: #9bea00;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    font-weight: 800;
+}
+
+
+footer p {
+    margin: 9px 0 0;
+}
+
+
+/* =========================================================
+   MOBILE HEADER
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .header-inner {
+        min-height: auto;
+    }
+
+
+    .brand-symbol {
+        width: 40px;
+        height: 40px;
+
+        font-size: 24px;
+    }
+
+
+    .brand-name {
+        font-size: 14px;
+
+        letter-spacing: 1.7px;
+    }
+
+
+    .brand-radar {
+        font-size: 10px;
+
+        letter-spacing: 3.5px;
+    }
+
+
+    .main-nav {
+        display: none;
+    }
+
+
+    .header-tagline {
+        margin-top: 18px;
+
+        padding-bottom: 23px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.4px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .update-information {
+        text-align: left;
+
+        margin-top: 18px;
+    }
+
+
+    .future-section {
+        margin-top: 55px;
+
+        padding-top: 40px;
+    }
+
+}
