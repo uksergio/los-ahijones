@@ -5,7 +5,9 @@ const categorySelect = document.getElementById("category");
 let news = [];
 
 
-/* Load news database */
+/* =========================================================
+   LOAD NEWS
+========================================================= */
 
 async function loadNews() {
 
@@ -19,6 +21,8 @@ async function loadNews() {
 
         news = await response.json();
 
+        updateStats();
+
         displayNews();
 
     } catch (error) {
@@ -29,8 +33,8 @@ async function loadNews() {
             <article class="news-card">
                 <h3>No se pudo cargar el feed</h3>
                 <p>
-                    Comprueba que el archivo data/news.json
-                    existe correctamente.
+                    Comprueba que el archivo
+                    data/news.json existe correctamente.
                 </p>
             </article>
         `;
@@ -40,41 +44,70 @@ async function loadNews() {
 }
 
 
-/* Display news */
+/* =========================================================
+   DISPLAY NEWS
+========================================================= */
 
 function displayNews() {
 
-    const searchTerm = searchInput.value.toLowerCase();
+    const searchTerm =
+        searchInput.value.trim().toLowerCase();
 
-    const selectedCategory = categorySelect.value;
-
-
-    const filteredNews = news.filter(item => {
-
-        const matchesSearch =
-            item.title.toLowerCase().includes(searchTerm) ||
-            item.summary.toLowerCase().includes(searchTerm) ||
-            item.source.toLowerCase().includes(searchTerm);
+    const selectedCategory =
+        categorySelect.value.toLowerCase();
 
 
-        const matchesCategory =
-            selectedCategory === "all" ||
-            item.category.toLowerCase() === selectedCategory;
+    const filteredNews = news
+        .filter(item => {
+
+            const title =
+                (item.title || "").toLowerCase();
+
+            const summary =
+                (item.summary || "").toLowerCase();
+
+            const source =
+                (item.source || "").toLowerCase();
+
+            const category =
+                (item.category || "").toLowerCase();
 
 
-        return matchesSearch && matchesCategory;
+            const matchesSearch =
+                title.includes(searchTerm) ||
+                summary.includes(searchTerm) ||
+                source.includes(searchTerm);
 
-    });
+
+            const matchesCategory =
+                selectedCategory === "all" ||
+                category === selectedCategory;
+
+
+            return (
+                matchesSearch &&
+                matchesCategory
+            );
+
+        })
+        .sort(
+            (a, b) =>
+                new Date(b.date) -
+                new Date(a.date)
+        );
 
 
     newsFeed.innerHTML = "";
 
+
+    /* No results */
 
     if (filteredNews.length === 0) {
 
         newsFeed.innerHTML = `
             <article class="news-card">
                 <h3>No hay resultados</h3>
+
                 <p>
                     No hemos encontrado información
                     que coincida con tu búsqueda.
@@ -87,74 +120,125 @@ function displayNews() {
     }
 
 
-    filteredNews
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
-        .forEach(item => {
+    /* Create cards */
 
-            const article = document.createElement("article");
+    filteredNews.forEach(item => {
 
-            article.className = "news-card";
-
-
-            article.innerHTML = `
-
-                <div class="news-meta">
-
-                    <span class="category-badge">
-                        ${item.category}
-                    </span>
-
-                    <span>
-                        ${item.source}
-                    </span>
-
-                </div>
+        const article =
+            document.createElement("article");
 
 
-                <h3>
-                    ${item.title}
-                </h3>
+        article.className = "news-card";
 
 
-                <p>
-                    ${item.summary}
-                </p>
+        article.innerHTML = `
+
+            <div class="news-meta">
+
+                <span class="category-badge">
+                    ${escapeHtml(item.category)}
+                </span>
+
+                <span>
+                    ${escapeHtml(item.source)}
+                </span>
+
+            </div>
 
 
-                <div class="news-footer">
-
-                    <span>
-                        ${formatDate(item.date)}
-                    </span>
-
-                    <a
-                        href="${item.url}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Leer original →
-                    </a>
-
-                </div>
-
-            `;
+            <h3>
+                ${escapeHtml(item.title)}
+            </h3>
 
 
-            newsFeed.appendChild(article);
+            <p>
+                ${escapeHtml(item.summary)}
+            </p>
 
-        });
+
+            <div class="news-footer">
+
+                <span>
+                    ${formatDate(item.date)}
+                </span>
 
 
-    updateStats();
+                <a
+                    href="${escapeAttribute(item.url)}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Leer original →
+                </a>
+
+            </div>
+
+        `;
+
+
+        newsFeed.appendChild(article);
+
+    });
 
 }
 
 
-/* Format dates */
+/* =========================================================
+   UPDATE STATISTICS
+========================================================= */
+
+function updateStats() {
+
+    const totalNews =
+        document.getElementById("total-news");
+
+
+    const newNews =
+        document.getElementById("new-news");
+
+
+    const sourceCount =
+        document.getElementById("source-count");
+
+
+    totalNews.textContent =
+        news.length;
+
+
+    newNews.textContent =
+        news.filter(item => item.new === true).length;
+
+
+    const uniqueSources =
+        new Set(
+            news
+                .map(item => item.source)
+                .filter(Boolean)
+        );
+
+
+    sourceCount.textContent =
+        uniqueSources.size;
+
+}
+
+
+/* =========================================================
+   FORMAT DATE
+========================================================= */
 
 function formatDate(date) {
 
-    return new Date(date).toLocaleDateString(
+    const parsedDate =
+        new Date(date);
+
+
+    if (Number.isNaN(parsedDate.getTime())) {
+        return date;
+    }
+
+
+    return parsedDate.toLocaleDateString(
         "es-ES",
         {
             day: "numeric",
@@ -166,21 +250,35 @@ function formatDate(date) {
 }
 
 
-/* Update statistics */
+/* =========================================================
+   SECURITY HELPERS
+========================================================= */
 
-function updateStats() {
+function escapeHtml(value) {
 
-    document.getElementById("total-news").textContent =
-        news.length;
-
-
-    document.getElementById("new-news").textContent =
-        news.filter(item => item.new).length;
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 
 }
 
 
-/* Search */
+function escapeAttribute(value) {
+
+    return String(value ?? "")
+        .replace(/"/g, "&quot;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
 
 searchInput.addEventListener(
     "input",
@@ -188,7 +286,9 @@ searchInput.addEventListener(
 );
 
 
-/* Category */
+/* =========================================================
+   CATEGORY FILTER
+========================================================= */
 
 categorySelect.addEventListener(
     "change",
@@ -196,6 +296,8 @@ categorySelect.addEventListener(
 );
 
 
-/* Start */
+/* =========================================================
+   START
+========================================================= */
 
 loadNews();
