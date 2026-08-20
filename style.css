@@ -1,24 +1,22 @@
 :root {
-    --black: #101312;
-    --black-soft: #191d1b;
+    --black: #0d0e0e;
+    --black-soft: #151716;
 
     --green: #174d3a;
-    --green-light: #23634a;
-    --green-soft: #dfe9e3;
+    --green-bright: #9bea00;
+    --green-soft: #eef5e8;
 
     --white: #ffffff;
-    --background: #f6f7f5;
+    --background: #fafbfa;
 
-    --text: #151817;
-    --muted: #68716c;
-    --border: #e2e6e3;
-
-    --max-width: 1180px;
+    --text: #161817;
+    --muted: #6d746f;
+    --border: #e2e5e2;
 }
 
 
 /* =========================================================
-   BASE
+   RESET
 ========================================================= */
 
 * {
@@ -31,15 +29,12 @@ html {
 
 body {
     margin: 0;
-
     background: var(--background);
-
     color: var(--text);
 
     font-family:
         -apple-system,
         BlinkMacSystemFont,
-        "Inter",
         "Segoe UI",
         Helvetica,
         Arial,
@@ -54,49 +49,104 @@ body {
 ========================================================= */
 
 .site-header {
-    background: var(--black);
+    position: relative;
 
+    background: var(--black);
     color: var(--white);
 
-    padding: 28px 24px 0;
+    padding: 34px 24px 48px;
+
+    overflow: hidden;
+}
+
+
+/* Thin green brand line */
+
+.site-header::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--green-bright);
 }
 
 
 .header-content {
-    max-width: var(--max-width);
+    max-width: 1160px;
 
-    margin: auto;
-
-    min-height: 88px;
+    margin: 0 auto;
 
     display: flex;
 
-    align-items: center;
-
     justify-content: space-between;
+
+    align-items: center;
 }
 
 
 /* =========================================================
-   BRAND
+   EXISTING HEADER TEXT
 ========================================================= */
 
-.brand {
-    display: flex;
+.eyebrow {
+    margin-bottom: 12px;
 
-    align-items: center;
+    color: var(--green-bright);
 
-    gap: 13px;
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
 }
 
 
-.brand-mark {
-    width: 43px;
-    height: 43px;
+h1 {
+    margin: 0;
 
-    border: 2px solid var(--green-light);
+    color: white;
 
-    color: var(--green-light);
+    font-size: 46px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: -1.5px;
+}
+
+
+.header-content p {
+    margin: 14px 0 0;
+
+    color: #b8bdb9;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   HEADER ICON
+   Keep the existing icon, but make it subtle
+========================================================= */
+
+.header-icon {
+    width: 82px;
+    height: 82px;
+
+    border: 2px solid var(--green-bright);
+
+    border-radius: 50%;
 
     display: flex;
 
@@ -104,90 +154,11 @@ body {
 
     justify-content: center;
 
-    font-size: 23px;
+    color: var(--green-bright);
 
-    font-weight: 800;
+    font-size: 38px;
 
-    letter-spacing: -2px;
-
-    transform: skew(-5deg);
-}
-
-
-.brand-text {
-    display: flex;
-
-    flex-direction: column;
-}
-
-
-.brand-name {
-    font-size: 17px;
-
-    font-weight: 800;
-
-    letter-spacing: 1.8px;
-}
-
-
-.brand-subtitle {
-    margin-top: 3px;
-
-    color: #9ba59f;
-
-    font-size: 8px;
-
-    font-weight: 600;
-
-    letter-spacing: 1.7px;
-}
-
-
-/* =========================================================
-   NAV
-========================================================= */
-
-.header-nav {
-    display: flex;
-
-    gap: 28px;
-
-    align-items: center;
-}
-
-
-.header-nav a {
-    color: #c8cfcb;
-
-    text-decoration: none;
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    transition: color 0.2s;
-}
-
-
-.header-nav a:hover {
-    color: white;
-}
-
-
-/* =========================================================
-   HEADER ACCENT
-========================================================= */
-
-.site-header::after {
-    content: "";
-
-    display: block;
-
-    height: 4px;
-
-    margin-top: 18px;
-
-    background: var(--green);
+    background: transparent;
 }
 
 
@@ -196,11 +167,11 @@ body {
 ========================================================= */
 
 .container {
-    max-width: var(--max-width);
+    max-width: 1160px;
 
     margin: 0 auto;
 
-    padding: 58px 24px 80px;
+    padding: 55px 24px 75px;
 }
 
 
@@ -211,64 +182,69 @@ body {
 .welcome {
     display: flex;
 
-    align-items: flex-end;
-
     justify-content: space-between;
 
-    padding-bottom: 34px;
+    align-items: flex-end;
+
+    padding-bottom: 30px;
+
+    margin-bottom: 0;
 
     border-bottom: 1px solid var(--border);
 
-    margin-bottom: 0;
+    background: transparent;
 }
 
 
 .welcome h2 {
     margin: 0;
 
-    font-size: 38px;
+    font-size: 36px;
 
-    line-height: 1.05;
+    line-height: 1.1;
 
-    letter-spacing: -1.5px;
+    font-weight: 700;
 
-    font-weight: 750;
+    letter-spacing: -1.2px;
+}
+
+
+.welcome h2::first-letter {
+    color: var(--text);
 }
 
 
 .welcome p {
-    margin: 12px 0 0;
+    margin: 10px 0 0;
 
     color: var(--muted);
 
-    font-size: 15px;
+    font-size: 14px;
 }
 
 
 .update-status {
-    color: var(--green);
+    color: var(--text);
 
-    font-size: 11px;
+    font-size: 12px;
 
-    font-weight: 700;
+    font-weight: 600;
 
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 
 .status-dot {
     display: inline-block;
 
-    width: 7px;
-    height: 7px;
+    width: 9px;
+    height: 9px;
 
-    margin-right: 7px;
+    margin-right: 8px;
 
     border-radius: 50%;
 
-    background: var(--green-light);
+    background: var(--green-bright);
 }
 
 
@@ -281,27 +257,35 @@ body {
 
     grid-template-columns: repeat(3, 1fr);
 
+    background: transparent;
+
     border-bottom: 1px solid var(--border);
 
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 }
 
 
 .stat-card {
-    padding: 24px 0;
+    padding: 25px 20px 25px 0;
 
     background: transparent;
 
     border-right: 1px solid var(--border);
+
+    border-radius: 0;
+
+    box-shadow: none;
 }
 
 
-.stat-card:not(:first-child) {
+.stat-card:nth-child(2) {
     padding-left: 28px;
 }
 
 
-.stat-card:last-child {
+.stat-card:nth-child(3) {
+    padding-left: 28px;
+
     border-right: none;
 }
 
@@ -309,9 +293,13 @@ body {
 .stat-number {
     display: block;
 
-    font-size: 31px;
+    color: var(--black);
 
-    font-weight: 750;
+    font-size: 32px;
+
+    line-height: 1;
+
+    font-weight: 700;
 
     letter-spacing: -1px;
 }
@@ -320,7 +308,7 @@ body {
 .stat-label {
     display: block;
 
-    margin-top: 4px;
+    margin-top: 8px;
 
     color: var(--muted);
 
@@ -328,7 +316,7 @@ body {
 
     font-weight: 700;
 
-    letter-spacing: 1.3px;
+    letter-spacing: 1.4px;
 
     text-transform: uppercase;
 }
@@ -339,60 +327,53 @@ body {
 ========================================================= */
 
 .filters {
-    display: flex;
+    display: grid;
 
-    gap: 12px;
+    grid-template-columns: 2fr 1fr;
 
-    margin-bottom: 35px;
+    gap: 14px;
 
-    padding-bottom: 15px;
-
-    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
 }
 
 
 .filters input,
 .filters select {
-    border: 0;
+    width: 100%;
 
-    border-bottom: 1px solid #cfd6d1;
+    border: 1px solid var(--border);
 
-    border-radius: 0;
+    border-radius: 3px;
 
-    background: transparent;
+    background: var(--white);
 
-    padding: 11px 4px;
+    color: var(--text);
+
+    padding: 14px 16px;
 
     font-family: inherit;
 
     font-size: 13px;
 
-    color: var(--text);
-
     outline: none;
 }
 
 
-.filters input {
-    flex: 1;
-
-    min-width: 180px;
-}
-
-
-.filters select {
-    min-width: 210px;
+.filters input::placeholder {
+    color: #9aa09c;
 }
 
 
 .filters input:focus,
 .filters select:focus {
-    border-bottom-color: var(--green);
+    border-color: var(--green);
+
+    box-shadow: 0 0 0 2px rgba(23, 77, 58, 0.08);
 }
 
 
 /* =========================================================
-   NEWS CARD
+   NEWS CARDS
 ========================================================= */
 
 .news-card {
@@ -400,49 +381,46 @@ body {
 
     background: var(--white);
 
-    padding: 28px 30px 24px;
-
-    margin-bottom: 12px;
-
     border: 1px solid var(--border);
 
+    border-radius: 3px;
+
+    padding: 27px 30px 24px;
+
+    margin-bottom: 14px;
+
+    box-shadow: none;
+
     transition:
-        border-color 0.2s,
-        transform 0.2s,
-        box-shadow 0.2s;
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
 }
 
+
+/* Green line */
 
 .news-card::before {
     content: "";
 
     position: absolute;
 
-    left: 0;
-    top: 0;
-    bottom: 0;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
 
     width: 3px;
 
-    background: var(--green);
-
-    opacity: 0;
-
-    transition: opacity 0.2s;
+    background: var(--green-bright);
 }
 
 
 .news-card:hover {
-    border-color: #c8d2cc;
+    border-color: #cdd4cf;
 
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 
-    box-shadow: 0 10px 28px rgba(16, 19, 18, 0.06);
-}
-
-
-.news-card:hover::before {
-    opacity: 1;
+    box-shadow: 0 8px 25px rgba(13, 14, 14, 0.05);
 }
 
 
@@ -455,32 +433,30 @@ body {
 
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
 
     color: var(--muted);
 
-    font-size: 10px;
+    font-size: 11px;
 
-    font-weight: 600;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.7px;
+    font-weight: 500;
 }
 
 
 .category-badge {
-    background: var(--green-soft);
+    padding: 0;
+
+    background: transparent;
 
     color: var(--green);
 
-    padding: 5px 8px;
-
-    font-size: 9px;
+    font-size: 10px;
 
     font-weight: 800;
 
     letter-spacing: 1px;
+
+    text-transform: uppercase;
 }
 
 
@@ -489,28 +465,30 @@ body {
 ========================================================= */
 
 .news-card h3 {
-    margin: 14px 0 10px;
+    margin: 13px 0 8px;
 
-    font-size: 22px;
+    color: var(--black);
 
-    line-height: 1.28;
+    font-size: 21px;
+
+    line-height: 1.35;
 
     font-weight: 700;
 
-    letter-spacing: -0.4px;
+    letter-spacing: -0.35px;
 }
 
 
 .news-card p {
     margin: 0;
 
-    max-width: 850px;
+    max-width: 900px;
 
     color: var(--muted);
 
     font-size: 14px;
 
-    line-height: 1.7;
+    line-height: 1.65;
 }
 
 
@@ -521,41 +499,41 @@ body {
 .news-footer {
     display: flex;
 
-    align-items: center;
-
     justify-content: space-between;
 
-    margin-top: 22px;
+    align-items: center;
+
+    margin-top: 20px;
 
     padding-top: 15px;
 
-    border-top: 1px solid #edf0ee;
+    border-top: 1px solid #edf0ed;
 
-    color: #7b837f;
+    color: #858b87;
 
-    font-size: 10px;
-
-    font-weight: 600;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.5px;
+    font-size: 11px;
 }
 
 
 .news-footer a {
-    color: var(--green);
+    color: var(--black);
 
     text-decoration: none;
 
-    font-weight: 800;
+    font-size: 11px;
 
-    letter-spacing: 0.7px;
+    font-weight: 700;
+
+    border-bottom: 2px solid var(--green-bright);
+
+    padding-bottom: 2px;
+
+    transition: color 0.2s ease;
 }
 
 
 .news-footer a:hover {
-    color: var(--green-light);
+    color: var(--green);
 }
 
 
@@ -566,19 +544,17 @@ body {
 footer {
     background: var(--black);
 
-    border-top: 1px solid #27302b;
+    border-top: 4px solid var(--green-bright);
 
     padding: 30px 20px;
 
     text-align: center;
 
-    color: #7e8882;
+    color: #8f9691;
 
     font-size: 10px;
 
     letter-spacing: 0.8px;
-
-    text-transform: uppercase;
 }
 
 
@@ -589,40 +565,37 @@ footer {
 @media (max-width: 700px) {
 
     .site-header {
-        padding: 20px 18px 0;
+        padding: 28px 18px 42px;
     }
 
 
     .header-content {
-        min-height: 72px;
+        align-items: flex-start;
     }
 
 
-    .brand-mark {
-        width: 38px;
-        height: 38px;
-
-        font-size: 20px;
+    h1 {
+        font-size: 34px;
     }
 
 
-    .brand-name {
-        font-size: 14px;
+    .header-content p {
+        font-size: 13px;
+
+        max-width: 280px;
     }
 
 
-    .brand-subtitle {
-        font-size: 7px;
-    }
+    .header-icon {
+        width: 58px;
+        height: 58px;
 
-
-    .header-nav {
-        display: none;
+        font-size: 28px;
     }
 
 
     .container {
-        padding: 40px 18px 60px;
+        padding: 40px 18px 55px;
     }
 
 
@@ -634,19 +607,14 @@ footer {
 
 
     .welcome h2 {
-        font-size: 31px;
-    }
-
-
-    .welcome p {
-        font-size: 14px;
+        font-size: 30px;
     }
 
 
     .update-status {
         display: block;
 
-        margin-top: 18px;
+        margin-top: 17px;
     }
 
 
@@ -655,17 +623,14 @@ footer {
     }
 
 
-    .stat-card {
+    .stat-card,
+    .stat-card:nth-child(2),
+    .stat-card:nth-child(3) {
         padding: 18px 0;
 
         border-right: none;
 
         border-bottom: 1px solid var(--border);
-    }
-
-
-    .stat-card:not(:first-child) {
-        padding-left: 0;
     }
 
 
@@ -675,19 +640,9 @@ footer {
 
 
     .filters {
-        flex-direction: column;
+        grid-template-columns: 1fr;
 
-        gap: 8px;
-
-        margin-bottom: 25px;
-    }
-
-
-    .filters input,
-    .filters select {
-        width: 100%;
-
-        min-width: 0;
+        gap: 9px;
     }
 
 
