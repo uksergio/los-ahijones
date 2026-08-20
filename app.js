@@ -13,7 +13,7 @@ async function loadNews() {
 
     try {
 
-        const response = await fetch("data/news.json");
+        const response = await fetch("data/news.json?v=4");
 
         if (!response.ok) {
             throw new Error("Could not load news database");
@@ -22,7 +22,6 @@ async function loadNews() {
         news = await response.json();
 
         updateStats();
-
         displayNews();
 
     } catch (error) {
@@ -72,11 +71,18 @@ function displayNews() {
             const category =
                 (item.category || "").toLowerCase();
 
+            const tags =
+                Array.isArray(item.tags)
+                    ? item.tags.join(" ").toLowerCase()
+                    : "";
+
+
+            const searchableText =
+                `${title} ${summary} ${source} ${tags}`;
+
 
             const matchesSearch =
-                title.includes(searchTerm) ||
-                summary.includes(searchTerm) ||
-                source.includes(searchTerm);
+                searchableText.includes(searchTerm);
 
 
             const matchesCategory =
@@ -100,8 +106,6 @@ function displayNews() {
     newsFeed.innerHTML = "";
 
 
-    /* No results */
-
     if (filteredNews.length === 0) {
 
         newsFeed.innerHTML = `
@@ -120,8 +124,6 @@ function displayNews() {
     }
 
 
-    /* Create cards */
-
     filteredNews.forEach(item => {
 
         const article =
@@ -131,6 +133,26 @@ function displayNews() {
         article.className = "news-card";
 
 
+        const newBadge =
+            item.new
+                ? `<span class="new-badge">NUEVO</span>`
+                : "";
+
+
+        const importance =
+            getImportanceLabel(item.importance);
+
+
+        const tags =
+            Array.isArray(item.tags)
+                ? item.tags
+                    .map(tag =>
+                        `<span class="tag">${escapeHtml(tag)}</span>`
+                    )
+                    .join("")
+                : "";
+
+
         article.innerHTML = `
 
             <div class="news-meta">
@@ -138,6 +160,10 @@ function displayNews() {
                 <span class="category-badge">
                     ${escapeHtml(item.category)}
                 </span>
+
+                ${newBadge}
+
+                ${importance}
 
                 <span>
                     ${escapeHtml(item.source)}
@@ -154,6 +180,17 @@ function displayNews() {
             <p>
                 ${escapeHtml(item.summary)}
             </p>
+
+
+            ${
+                tags
+                    ? `
+                        <div class="news-tags">
+                            ${tags}
+                        </div>
+                      `
+                    : ""
+            }
 
 
             <div class="news-footer">
@@ -184,29 +221,52 @@ function displayNews() {
 
 
 /* =========================================================
-   UPDATE STATISTICS
+   IMPORTANCE
+========================================================= */
+
+function getImportanceLabel(level) {
+
+    switch (level) {
+
+        case "high":
+
+            return `
+                <span class="importance high">
+                    Importante
+                </span>
+            `;
+
+        case "medium":
+
+            return `
+                <span class="importance medium">
+                    Relevante
+                </span>
+            `;
+
+        default:
+
+            return "";
+
+    }
+
+}
+
+
+/* =========================================================
+   STATISTICS
 ========================================================= */
 
 function updateStats() {
 
-    const totalNews =
-        document.getElementById("total-news");
-
-
-    const newNews =
-        document.getElementById("new-news");
-
-
-    const sourceCount =
-        document.getElementById("source-count");
-
-
-    totalNews.textContent =
+    document.getElementById("total-news").textContent =
         news.length;
 
 
-    newNews.textContent =
-        news.filter(item => item.new === true).length;
+    document.getElementById("new-news").textContent =
+        news.filter(
+            item => item.new === true
+        ).length;
 
 
     const uniqueSources =
@@ -217,14 +277,14 @@ function updateStats() {
         );
 
 
-    sourceCount.textContent =
+    document.getElementById("source-count").textContent =
         uniqueSources.size;
 
 }
 
 
 /* =========================================================
-   FORMAT DATE
+   DATE
 ========================================================= */
 
 function formatDate(date) {
@@ -251,7 +311,7 @@ function formatDate(date) {
 
 
 /* =========================================================
-   SECURITY HELPERS
+   SECURITY
 ========================================================= */
 
 function escapeHtml(value) {
@@ -277,7 +337,7 @@ function escapeAttribute(value) {
 
 
 /* =========================================================
-   SEARCH
+   SEARCH & FILTER
 ========================================================= */
 
 searchInput.addEventListener(
@@ -285,10 +345,6 @@ searchInput.addEventListener(
     displayNews
 );
 
-
-/* =========================================================
-   CATEGORY FILTER
-========================================================= */
 
 categorySelect.addEventListener(
     "change",
