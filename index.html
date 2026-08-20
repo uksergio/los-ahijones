@@ -1,128 +1,426 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Los Ahijones Radar</title>
 
+    <meta
+        name="description"
+        content="Noticias, novedades e información sobre Los Ahijones, Madrid."
+    >
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <header class="site-header">
-        <div class="header-content">
-            <div>
-                <div class="eyebrow">MADRID · UZPp 2.03</div>
-                <h1>Los Ahijones Radar</h1>
-                <p>Noticias, novedades e información sobre Los Ahijones</p>
-            </div>
 
-            <div class="header-icon">🏙️</div>
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+
+            <!-- BRAND -->
+
+            <a
+                href="#top"
+                class="brand"
+                aria-label="Los Ahijones Radar"
+            >
+
+                <span class="brand-symbol">
+                    A
+                </span>
+
+                <span class="brand-copy">
+
+                    <span class="brand-name">
+                        LOS AHIJONES
+                    </span>
+
+                    <span class="brand-radar">
+                        RADAR
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="main-nav">
+
+                <a
+                    href="#top"
+                    class="active"
+                >
+                    Inicio
+                </a>
+
+                <a href="#news-feed">
+                    Noticias
+                </a>
+
+                <a href="#sources">
+                    Fuentes
+                </a>
+
+                <a href="#map">
+                    Mapa
+                </a>
+
+                <a href="#about">
+                    Acerca de
+                </a>
+
+            </nav>
+
         </div>
+
+
+        <!-- TAGLINE -->
+
+        <div class="header-tagline">
+
+            <span>
+                INFORMACIÓN
+            </span>
+
+            <i></i>
+
+            <span>
+                ACTUALIDAD
+            </span>
+
+            <i></i>
+
+            <span>
+                DESARROLLO
+            </span>
+
+        </div>
+
     </header>
 
 
-    <main class="container">
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main
+        class="container"
+        id="top"
+    >
+
+
+        <!-- INTRO -->
 
         <section class="welcome">
+
             <div>
-                <h2>Últimas novedades</h2>
+
+                <h2>
+                    Últimas <span>novedades</span>
+                </h2>
+
                 <p>
-                    Información publicada sobre el desarrollo de Los Ahijones.
+                    Información publicada sobre el desarrollo
+                    de Los Ahijones.
                 </p>
+
             </div>
 
-            <div class="update-status">
-                <span class="status-dot"></span>
-                Radar activo
+
+            <div class="update-information">
+
+                <div class="update-status">
+
+                    <span class="status-dot"></span>
+
+                    Radar activo
+
+                </div>
+
+                <div class="last-update">
+                    Actualizado recientemente
+                </div>
+
             </div>
+
         </section>
 
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================== -->
 
         <section class="stats">
 
             <div class="stat-card">
-                <span class="stat-number" id="total-news">0</span>
-                <span class="stat-label">Publicaciones</span>
+
+                <span
+                    class="stat-number"
+                    id="total-news"
+                >
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Publicaciones
+                </span>
+
             </div>
 
-            <div class="stat-card">
-                <span class="stat-number" id="new-news">0</span>
-                <span class="stat-label">Nuevas</span>
-            </div>
 
             <div class="stat-card">
-                <span class="stat-number">0</span>
-                <span class="stat-label">Fuentes</span>
+
+                <span
+                    class="stat-number"
+                    id="new-news"
+                >
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Nuevas
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span
+                    class="stat-number"
+                    id="source-count"
+                >
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Fuentes
+                </span>
+
             </div>
 
         </section>
 
 
+
+        <!-- =================================================
+             FILTERS
+        ================================================== -->
+
         <section class="filters">
 
-            <input
-                type="search"
-                id="search"
-                placeholder="Buscar en Los Ahijones..."
+            <div class="search-wrapper">
+
+                <span class="search-icon">
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    id="search"
+                    placeholder="Buscar en Los Ahijones..."
+                    aria-label="Buscar en Los Ahijones"
+                >
+
+            </div>
+
+
+            <select
+                id="category"
+                aria-label="Filtrar por categoría"
             >
 
-            <select id="category">
-                <option value="all">Todas las categorías</option>
-                <option value="urbanismo">Urbanismo</option>
-                <option value="vivienda">Vivienda</option>
-                <option value="obras">Obras</option>
-                <option value="transporte">Transporte</option>
-                <option value="equipamientos">Equipamientos</option>
-                <option value="administracion">Administración</option>
-                <option value="empresas">Empresas</option>
+                <option value="all">
+                    Todas las categorías
+                </option>
+
+                <option value="urbanismo">
+                    Urbanismo
+                </option>
+
+                <option value="vivienda">
+                    Vivienda
+                </option>
+
+                <option value="obras">
+                    Obras
+                </option>
+
+                <option value="transporte">
+                    Transporte
+                </option>
+
+                <option value="equipamientos">
+                    Equipamientos
+                </option>
+
+                <option value="administracion">
+                    Administración
+                </option>
+
+                <option value="empresas">
+                    Empresas
+                </option>
+
+                <option value="general">
+                    General
+                </option>
+
             </select>
 
         </section>
 
 
-        <section id="news-feed">
 
-            <article class="news-card">
+        <!-- =================================================
+             NEWS
+        ================================================== -->
 
-                <div class="news-meta">
-                    <span class="category-badge">PROYECTO</span>
-                    <span>Los Ahijones Radar</span>
-                </div>
+        <section
+            id="news-feed"
+            aria-label="Noticias de Los Ahijones"
+        >
 
-                <h3>
-                    Bienvenido a Los Ahijones Radar
-                </h3>
-
-                <p>
-                    Este será tu centro personal de información sobre
-                    Los Ahijones. Aquí aparecerán noticias, anuncios,
-                    proyectos, obras, transporte y cualquier otra
-                    información relevante.
-                </p>
-
-                <div class="news-footer">
-                    <span>20 agosto 2026</span>
-                    <span>Primer registro</span>
-                </div>
-
-            </article>
+            <!--
+                News cards are generated automatically
+                by app.js from data/news.json.
+            -->
 
         </section>
+
+
+
+        <!-- =================================================
+             FUTURE SOURCES SECTION
+        ================================================== -->
+
+        <section
+            id="sources"
+            class="future-section"
+        >
+
+            <span class="section-kicker">
+                FUENTES
+            </span>
+
+            <h2>
+                Fuentes monitorizadas
+            </h2>
+
+            <p>
+                Aquí aparecerán las fuentes utilizadas para
+                detectar nuevas publicaciones sobre Los Ahijones.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FUTURE MAP SECTION
+        ================================================== -->
+
+        <section
+            id="map"
+            class="future-section"
+        >
+
+            <span class="section-kicker">
+                MAPA
+            </span>
+
+            <h2>
+                Los Ahijones
+            </h2>
+
+            <p>
+                Próximamente podremos incorporar aquí un mapa
+                del ámbito y sus principales desarrollos.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <section
+            id="about"
+            class="future-section about-section"
+        >
+
+            <span class="section-kicker">
+                ACERCA DE
+            </span>
+
+            <h2>
+                Los Ahijones Radar
+            </h2>
+
+            <p>
+                Proyecto personal para recopilar, organizar y
+                consultar información pública relacionada con
+                el desarrollo de Los Ahijones, Madrid.
+            </p>
+
+        </section>
+
 
     </main>
 
 
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer>
+
+        <div class="footer-brand">
+
+            <span class="footer-symbol">
+                A
+            </span>
+
+            <span>
+                LOS AHIJONES RADAR
+            </span>
+
+        </div>
+
         <p>
-            Los Ahijones Radar · Proyecto personal · Madrid
+            Proyecto personal · Madrid
         </p>
+
     </footer>
+
 
 
     <script src="app.js"></script>
 
 </body>
+
 </html>
