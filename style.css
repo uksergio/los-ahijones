@@ -1,26 +1,109 @@
+/* =========================================================
+   LOS AHIJONES RADAR
+   Visual identity inspired by Los Ahijones
+   ========================================================= */
+
+:root {
+    --ah-dark: #242424;
+    --ah-dark-soft: #303030;
+    --ah-lime: #c7ff00;
+    --ah-lime-soft: #efffb5;
+
+    --background: #f3f3f1;
+    --white: #ffffff;
+
+    --text: #242424;
+    --muted: #747474;
+    --border: #e3e3df;
+
+    --shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #f4f6f8;
-    color: #172033;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+   ========================================================= */
 
 .site-header {
-    background: linear-gradient(135deg, #111827, #1f2937);
+    position: relative;
+
+    background: var(--ah-dark);
     color: white;
-    padding: 55px 20px 60px;
+
+    padding: 42px 20px 85px;
+
+    overflow: hidden;
 }
 
+
+/* Decorative transport-style line */
+
+.site-header::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 7px;
+
+    background: var(--ah-lime);
+}
+
+
+/* Decorative route */
+
+.site-header::before {
+    content: "";
+
+    position: absolute;
+
+    right: -80px;
+    bottom: -130px;
+
+    width: 380px;
+    height: 380px;
+
+    border: 3px solid rgba(199, 255, 0, 0.22);
+
+    border-radius: 50%;
+}
+
+
 .header-content {
+    position: relative;
+    z-index: 2;
+
     max-width: 1120px;
     margin: auto;
 
@@ -29,83 +112,206 @@ body {
     align-items: center;
 }
 
-.eyebrow {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    opacity: 0.55;
-    margin-bottom: 12px;
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
+
+
+/* Our own simplified A symbol */
+
+.brand-mark {
+    width: 54px;
+    height: 54px;
+
+    border: 4px solid var(--ah-lime);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+    font-weight: 900;
+
+    color: var(--ah-lime);
+
+    transform: skew(-7deg);
+}
+
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.brand-name {
+    font-size: 21px;
+    font-weight: 850;
+
+    letter-spacing: 1.5px;
+}
+
+
+.brand-subtitle {
+    margin-top: 4px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #bdbdbd;
+}
+
+
+.eyebrow {
+    margin-bottom: 12px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    color: var(--ah-lime);
+}
+
 
 h1 {
     margin: 0;
-    font-size: 44px;
-    letter-spacing: -1px;
-    line-height: 1.05;
+
+    font-size: 48px;
+    line-height: 1;
+
+    letter-spacing: -1.5px;
 }
+
 
 .header-content p {
     margin: 14px 0 0;
-    font-size: 17px;
-    opacity: 0.7;
+
+    font-size: 16px;
+
+    color: #c8c8c8;
 }
+
+
+/* =========================================================
+   HEADER GRAPHIC
+   ========================================================= */
 
 .header-icon {
-    font-size: 70px;
+    position: relative;
+
+    width: 100px;
+    height: 100px;
+
+    border: 3px solid var(--ah-lime);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--ah-lime);
+
+    font-size: 52px;
+    font-weight: 900;
+}
+
+.header-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 135px;
+    height: 135px;
+
+    border: 2px solid rgba(199, 255, 0, 0.25);
+
+    border-radius: 50%;
 }
 
 
-/* =========================
-   MAIN CONTAINER
-========================= */
+/* =========================================================
+   MAIN
+   ========================================================= */
 
 .container {
+    position: relative;
+    z-index: 3;
+
     max-width: 1120px;
-    margin: -30px auto 60px;
+
+    margin: -42px auto 70px;
+
     padding: 0 20px;
 }
 
 
-/* =========================
-   WELCOME CARD
-========================= */
+/* =========================================================
+   WELCOME
+   ========================================================= */
 
 .welcome {
-    background: white;
-    border-radius: 18px;
-    padding: 25px 28px;
+    background: var(--white);
+
+    border-radius: 4px;
+
+    padding: 27px 30px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    box-shadow: var(--shadow);
 
-    margin-bottom: 22px;
+    border-left: 7px solid var(--ah-lime);
+
+    margin-bottom: 18px;
 }
+
 
 .welcome h2 {
     margin: 0;
-    font-size: 26px;
+
+    font-size: 25px;
+
+    letter-spacing: -0.4px;
 }
+
 
 .welcome p {
     margin: 7px 0 0;
-    color: #667085;
+
+    color: var(--muted);
+
+    font-size: 14px;
 }
 
+
 .update-status {
-    background: #ecfdf3;
-    color: #027a48;
+    background: var(--ah-lime-soft);
+
+    color: var(--ah-dark);
 
     padding: 9px 14px;
-    border-radius: 20px;
 
-    font-size: 13px;
-    font-weight: 600;
+    border-radius: 3px;
+
+    font-size: 12px;
+    font-weight: 750;
 
     white-space: nowrap;
 }
+
 
 .status-dot {
     display: inline-block;
@@ -113,123 +319,166 @@ h1 {
     width: 8px;
     height: 8px;
 
-    background: #12b76a;
+    background: #62a600;
+
     border-radius: 50%;
 
     margin-right: 7px;
 }
 
 
-/* =========================
+/* =========================================================
    STATISTICS
-========================= */
+   ========================================================= */
 
 .stats {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+
+    gap: 1px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
 
     margin-bottom: 25px;
 }
 
+
 .stat-card {
-    background: white;
+    background: var(--white);
 
-    padding: 22px;
-
-    border-radius: 15px;
-
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+    padding: 21px 24px;
 }
+
 
 .stat-number {
     display: block;
 
     font-size: 30px;
-    font-weight: 750;
+    font-weight: 800;
 
-    margin-bottom: 4px;
+    letter-spacing: -1px;
 }
+
 
 .stat-label {
-    color: #667085;
-    font-size: 13px;
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
 }
 
 
-/* =========================
+/* =========================================================
    FILTERS
-========================= */
+   ========================================================= */
 
 .filters {
     display: flex;
-    gap: 12px;
 
-    margin-bottom: 25px;
+    gap: 10px;
+
+    margin-bottom: 20px;
 }
+
 
 .filters input,
 .filters select {
-    border: 1px solid #d0d5dd;
+    border: 1px solid var(--border);
 
-    background: white;
+    background: var(--white);
 
-    border-radius: 11px;
+    border-radius: 3px;
 
     padding: 13px 15px;
 
     font-size: 14px;
 
-    outline: none;
+    color: var(--text);
 
-    transition: 0.2s;
+    outline: none;
 }
+
 
 .filters input {
     flex: 1;
 }
 
+
 .filters select {
     min-width: 230px;
 }
 
+
 .filters input:focus,
 .filters select:focus {
-    border-color: #667085;
-    box-shadow: 0 0 0 3px rgba(102, 112, 133, 0.1);
+    border-color: var(--ah-dark);
+
+    box-shadow:
+        inset 0 -3px 0 var(--ah-lime);
 }
 
 
-/* =========================
-   NEWS CARDS
-========================= */
+/* =========================================================
+   NEWS FEED
+   ========================================================= */
 
 .news-card {
-    background: white;
+    position: relative;
 
-    padding: 25px 27px;
+    background: var(--white);
 
-    margin-bottom: 16px;
+    padding: 25px 28px 23px;
 
-    border-radius: 16px;
+    margin-bottom: 13px;
 
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.045);
+    border-radius: 3px;
+
+    border: 1px solid #e9e9e6;
 
     transition:
         transform 0.15s ease,
         box-shadow 0.15s ease;
 }
 
-.news-card:hover {
-    transform: translateY(-2px);
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+/* Lime timeline */
+
+.news-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 4px;
+
+    background: var(--ah-lime);
 }
 
 
-/* =========================
+.news-card:hover {
+    transform: translateX(3px);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
    NEWS META
-========================= */
+   ========================================================= */
 
 .news-meta {
     display: flex;
@@ -238,138 +487,186 @@ h1 {
 
     align-items: center;
 
-    color: #667085;
+    color: var(--muted);
 
-    font-size: 12px;
+    font-size: 11px;
 }
 
+
 .category-badge {
-    background: #eef2ff;
+    background: var(--ah-dark);
 
-    color: #3730a3;
+    color: var(--ah-lime);
 
-    padding: 5px 9px;
+    padding: 5px 8px;
 
-    border-radius: 6px;
+    border-radius: 2px;
 
-    font-weight: 700;
+    font-size: 9px;
+    font-weight: 800;
 
-    font-size: 10px;
-
-    letter-spacing: 0.4px;
+    letter-spacing: 1px;
 
     text-transform: uppercase;
 }
 
 
-/* =========================
+/* =========================================================
    NEWS TITLE
-========================= */
+   ========================================================= */
 
 .news-card h3 {
-    font-size: 22px;
+    font-size: 21px;
 
     line-height: 1.3;
 
-    margin: 14px 0 9px;
+    margin: 13px 0 9px;
 
     letter-spacing: -0.3px;
 }
 
+
 .news-card p {
-    color: #667085;
+    color: var(--muted);
 
     line-height: 1.65;
+
+    font-size: 14px;
 
     margin: 0;
 }
 
 
-/* =========================
+/* =========================================================
    NEWS FOOTER
-========================= */
+   ========================================================= */
 
 .news-footer {
     display: flex;
 
     justify-content: space-between;
-
     align-items: center;
 
-    margin-top: 20px;
+    margin-top: 18px;
 
-    padding-top: 15px;
+    padding-top: 14px;
 
-    border-top: 1px solid #eaecf0;
+    border-top: 1px solid #eeeeeb;
 
-    font-size: 12px;
+    font-size: 11px;
 
-    color: #667085;
+    color: var(--muted);
 }
+
 
 .news-footer a {
-    color: #344054;
+    color: var(--ah-dark);
 
-    font-weight: 600;
+    font-weight: 800;
 
     text-decoration: none;
+
+    border-bottom: 2px solid var(--ah-lime);
 }
+
 
 .news-footer a:hover {
-    text-decoration: underline;
+    background: var(--ah-lime);
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+   ========================================================= */
 
 footer {
+    background: var(--ah-dark);
+
+    border-top: 6px solid var(--ah-lime);
+
     text-align: center;
 
-    padding: 35px 20px 45px;
+    padding: 30px 20px;
 
-    color: #98a2b3;
+    color: #a9a9a9;
 
-    font-size: 12px;
+    font-size: 11px;
+
+    letter-spacing: 0.5px;
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+   ========================================================= */
 
 @media (max-width: 700px) {
 
     .site-header {
-        padding: 40px 20px 55px;
+        padding: 32px 20px 70px;
     }
+
 
     .header-content {
         align-items: flex-start;
     }
 
-    h1 {
-        font-size: 34px;
+
+    .brand-mark {
+        width: 44px;
+        height: 44px;
+
+        font-size: 24px;
     }
+
+
+    .brand-name {
+        font-size: 17px;
+    }
+
+
+    .brand-subtitle {
+        font-size: 8px;
+    }
+
+
+    h1 {
+        font-size: 36px;
+    }
+
 
     .header-content p {
-        font-size: 15px;
+        font-size: 14px;
     }
+
 
     .header-icon {
-        font-size: 45px;
+        width: 60px;
+        height: 60px;
+
+        font-size: 32px;
     }
 
-    .container {
-        margin-top: -25px;
+
+    .header-icon::after {
+        width: 82px;
+        height: 82px;
     }
+
+
+    .container {
+        margin-top: -32px;
+    }
+
 
     .welcome {
         display: block;
 
         padding: 22px;
+
+        border-left-width: 5px;
     }
+
 
     .update-status {
         display: inline-block;
@@ -377,25 +674,31 @@ footer {
         margin-top: 15px;
     }
 
+
     .stats {
         grid-template-columns: 1fr;
     }
+
 
     .filters {
         flex-direction: column;
     }
 
+
     .filters select {
         width: 100%;
     }
 
+
     .news-card {
-        padding: 21px;
+        padding: 21px 20px 20px;
     }
+
 
     .news-card h3 {
         font-size: 19px;
     }
+
 
     .news-footer {
         flex-direction: column;
@@ -404,4 +707,5 @@ footer {
 
         gap: 10px;
     }
+
 }
