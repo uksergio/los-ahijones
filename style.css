@@ -1110,3 +1110,50 @@ body {
     }
 
 }
+
+/* =========================================================
+   NEWS STATUS
+========================================================= */
+
+.new-badge {
+    color: var(--green-dark);
+    background: var(--green-bright);
+    padding: 3px 6px;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+.importance {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+.importance.high {
+    color: var(--green-dark);
+}
+
+
+.importance.medium {
+    color: var(--green);
+}
+
+
+.news-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 15px;
+}
+
+
+.tag {
+    color: #7b837e;
+    background: #f1f3f1;
+    padding: 4px 7px;
+    font-size: 9px;
+    border-radius: 2px;
+}
