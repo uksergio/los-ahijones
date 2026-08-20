@@ -4,32 +4,49 @@
     "title": "Los Ahijones Radar — proyecto iniciado",
     "date": "2026-08-20",
     "source": "Los Ahijones Radar",
+    "sourceType": "Proyecto",
     "category": "General",
     "summary": "Inicio del archivo de información y noticias relacionadas con el desarrollo de Los Ahijones, Madrid.",
     "url": "https://uksergio.github.io/los-ahijones/",
     "importance": "normal",
-    "new": true
+    "new": true,
+    "tags": [
+      "Los Ahijones",
+      "Madrid"
+    ]
   },
   {
     "id": "ahijones-002",
     "title": "Los Ahijones: desarrollo urbanístico del UZPp 2.03",
     "date": "2026-08-20",
     "source": "Información de referencia",
+    "sourceType": "Referencia",
     "category": "Urbanismo",
     "summary": "Los Ahijones corresponde al ámbito UZPp 2.03 Desarrollo del Este - Los Ahijones, situado en Madrid.",
     "url": "https://uksergio.github.io/los-ahijones/",
     "importance": "high",
-    "new": true
+    "new": true,
+    "tags": [
+      "UZPp 2.03",
+      "Urbanismo",
+      "Los Ahijones"
+    ]
   },
   {
     "id": "ahijones-003",
     "title": "Nuevos desarrollos residenciales en Los Ahijones",
     "date": "2026-08-20",
     "source": "Los Ahijones Radar",
+    "sourceType": "Proyecto",
     "category": "Vivienda",
     "summary": "El desarrollo de Los Ahijones contempla nuevos proyectos residenciales que transformarán progresivamente el ámbito.",
     "url": "https://uksergio.github.io/los-ahijones/",
     "importance": "normal",
-    "new": true
+    "new": true,
+    "tags": [
+      "Vivienda",
+      "Residencial",
+      "Los Ahijones"
+    ]
   }
 ]
