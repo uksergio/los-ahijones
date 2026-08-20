@@ -1,52 +1,216 @@
 [
   {
     "id": "ahijones-001",
-    "title": "Los Ahijones Radar — proyecto iniciado",
-    "date": "2026-08-20",
-    "source": "Los Ahijones Radar",
-    "sourceType": "Proyecto",
-    "category": "General",
-    "summary": "Inicio del archivo de información y noticias relacionadas con el desarrollo de Los Ahijones, Madrid.",
-    "url": "https://uksergio.github.io/los-ahijones/",
-    "importance": "normal",
+    "title": "Los Ahijones avanza en la puesta en marcha de su infraestructura eléctrica",
+    "date": "2026-06-24",
+    "source": "Los Ahijones",
+    "sourceType": "Urbanismo",
+    "category": "Infraestructuras",
+    "summary": "La subestación eléctrica Los Ahijones avanza hacia su puesta en funcionamiento con pruebas de tensión en la línea de alimentación y en la instalación de 132/15 kV.",
+    "url": "https://www.ahijones.es/institucional/los-ahijones-avanza-infraestructura-electrica/",
+    "importance": "high",
+    "relevance": "direct",
     "new": true,
     "tags": [
-      "Los Ahijones",
-      "Madrid"
+      "Infraestructuras",
+      "Electricidad",
+      "Subestación",
+      "Urbanización"
     ]
   },
   {
     "id": "ahijones-002",
-    "title": "Los Ahijones: desarrollo urbanístico del UZPp 2.03",
-    "date": "2026-08-20",
-    "source": "Información de referencia",
-    "sourceType": "Referencia",
-    "category": "Urbanismo",
-    "summary": "Los Ahijones corresponde al ámbito UZPp 2.03 Desarrollo del Este - Los Ahijones, situado en Madrid.",
-    "url": "https://uksergio.github.io/los-ahijones/",
+    "title": "La futura estación de Metro de Los Ahijones avanza con 15 empresas interesadas",
+    "date": "2026-06-17",
+    "source": "Los Ahijones",
+    "sourceType": "Urbanismo",
+    "category": "Transporte",
+    "summary": "La futura estación Ahijones-Berrocales avanza en su tramitación con 15 empresas interesadas en el proyecto, reforzando la conexión de ambos desarrollos con la red de Metro.",
+    "url": "https://www.ahijones.es/institucional/category/noticias/",
     "importance": "high",
+    "relevance": "direct",
     "new": true,
     "tags": [
-      "UZPp 2.03",
-      "Urbanismo",
-      "Los Ahijones"
+      "Metro",
+      "Línea 9",
+      "Ahijones-Berrocales",
+      "Transporte"
     ]
   },
   {
     "id": "ahijones-003",
-    "title": "Nuevos desarrollos residenciales en Los Ahijones",
-    "date": "2026-08-20",
-    "source": "Los Ahijones Radar",
-    "sourceType": "Proyecto",
+    "title": "Los Ahijones incorporará 43 nuevas viviendas protegidas en régimen de cooperativa",
+    "date": "2026-06-15",
+    "source": "Los Ahijones",
+    "sourceType": "Empresas",
     "category": "Vivienda",
-    "summary": "El desarrollo de Los Ahijones contempla nuevos proyectos residenciales que transformarán progresivamente el ámbito.",
-    "url": "https://uksergio.github.io/los-ahijones/",
-    "importance": "normal",
+    "summary": "Una nueva promoción VPPL incorporará 43 viviendas protegidas, 78 plazas de garaje, 43 trasteros y tres locales comerciales en Los Ahijones.",
+    "url": "https://www.ahijones.es/institucional/los-ahijones-43-viviendas-protegidas-cooperativa/",
+    "importance": "high",
+    "relevance": "direct",
     "new": true,
     "tags": [
-      "Vivienda",
-      "Residencial",
-      "Los Ahijones"
+      "Vivienda protegida",
+      "VPPL",
+      "Cooperativa",
+      "Asentis",
+      "Avalmadrid"
+    ]
+  },
+  {
+    "id": "ahijones-004",
+    "title": "La Comunidad de Madrid inicia la tramitación de 513 viviendas del Plan Vive Solución Joven",
+    "date": "2026-06-12",
+    "source": "Comunidad de Madrid",
+    "sourceType": "Administración",
+    "category": "Vivienda",
+    "summary": "La Comunidad de Madrid inicia la tramitación de 513 viviendas de alquiler asequible destinadas preferentemente a menores de 35 años en una parcela de 31.709 m² de Los Ahijones.",
+    "url": "https://www.comunidad.madrid/noticias/2026/06/12/comunidad-madrid-inicia-tramitacion-513-viviendas-plan-vive-solucion-joven-ahijones-menores-35-anos",
+    "importance": "high",
+    "relevance": "direct",
+    "new": true,
+    "tags": [
+      "Plan Vive",
+      "Vivienda asequible",
+      "Vivienda protegida",
+      "Menores de 35",
+      "Comunidad de Madrid"
+    ]
+  },
+  {
+    "id": "ahijones-005",
+    "title": "Los Ahijones formará parte de la nueva oferta de vivienda asequible con opción a compra en Madrid",
+    "date": "2026-06-03",
+    "source": "Los Ahijones",
+    "sourceType": "Administración",
+    "category": "Vivienda",
+    "summary": "El Ayuntamiento de Madrid prevé licitar diez parcelas municipales en Los Ahijones y Los Berrocales para impulsar 1.017 viviendas bajo una nueva modalidad de vivienda asequible con opción a compra.",
+    "url": "https://www.ahijones.es/institucional/category/noticias/",
+    "importance": "high",
+    "relevance": "direct",
+    "new": true,
+    "tags": [
+      "Vivienda asequible",
+      "Opción a compra",
+      "Ayuntamiento de Madrid",
+      "Los Berrocales"
+    ]
+  },
+  {
+    "id": "ahijones-006",
+    "title": "Los Ahijones inicia la urbanización de su Etapa 2 con 4.245 viviendas previstas",
+    "date": "2026-05-12",
+    "source": "Los Ahijones",
+    "sourceType": "Urbanismo",
+    "category": "Obras",
+    "summary": "Las obras de urbanización de la Etapa 2 se ponen en marcha con una inversión estimada de 55,5 millones de euros. La fase contempla 4.245 viviendas, aproximadamente el 60% protegidas, y cerca de 95.000 m² de edificabilidad para actividad económica.",
+    "url": "https://www.ahijones.es/institucional/urbanizacion-etapa-2-los-ahijones-madrid/",
+    "importance": "high",
+    "relevance": "direct",
+    "new": true,
+    "tags": [
+      "Etapa 2",
+      "Urbanización",
+      "4.245 viviendas",
+      "55,5 millones",
+      "Vivienda protegida"
+    ]
+  },
+  {
+    "id": "ahijones-007",
+    "title": "Los Ahijones regresa a SIMA 2026 para mostrar el avance del proyecto",
+    "date": "2026-05-18",
+    "source": "Los Ahijones",
+    "sourceType": "Empresas",
+    "category": "General",
+    "summary": "Los Ahijones participa en SIMA 2026 para presentar la evolución del desarrollo urbanístico y mostrar su maqueta física a profesionales, inversores y futuros vecinos.",
+    "url": "https://www.ahijones.es/institucional/los-ahijones-sima-2026-avances-desarrollo-madrid/",
+    "importance": "medium",
+    "relevance": "direct",
+    "new": true,
+    "tags": [
+      "SIMA 2026",
+      "Promoción",
+      "Inversión",
+      "Desarrollo urbanístico"
+    ]
+  },
+  {
+    "id": "ahijones-008",
+    "title": "Pryconsa impulsa 300 viviendas protegidas en Los Ahijones",
+    "date": "2026-04-08",
+    "source": "Pryconsa",
+    "sourceType": "Empresa",
+    "category": "Vivienda",
+    "summary": "Pryconsa desarrollará 300 viviendas protegidas en régimen de alquiler sobre la parcela TO-1.2, además de incorporar actividad comercial y servicios en planta baja.",
+    "url": "https://www.pryconsa.es/noticias/pryconsa-impulsa-el-nuevo-skyline-del-sureste-de-madrid-con-su-primer-gran-proyecto-residencial-industrializado-destinado-al-btr",
+    "importance": "high",
+    "relevance": "direct",
+    "new": true,
+    "tags": [
+      "Pryconsa",
+      "300 viviendas",
+      "BTR",
+      "Vivienda protegida",
+      "TO-1.2"
+    ]
+  },
+  {
+    "id": "ahijones-009",
+    "title": "La integración de la Línea 9B y la nueva estación prevista para 2030 reforzarán la conectividad",
+    "date": "2026-02-24",
+    "source": "Los Ahijones",
+    "sourceType": "Transporte",
+    "category": "Transporte",
+    "summary": "La Comunidad de Madrid prevé integrar la actual Línea 9B en la red general en 2030 y contempla una nueva estación entre Puerta de Arganda y Rivas Urbanizaciones que beneficiará al entorno de Los Ahijones.",
+    "url": "https://www.ahijones.es/institucional/estacion-de-metro-en-los-ahijones/",
+    "importance": "high",
+    "relevance": "direct",
+    "new": true,
+    "tags": [
+      "Metro",
+      "Línea 9B",
+      "2030",
+      "Transporte público",
+      "Puerta de Arganda"
+    ]
+  },
+  {
+    "id": "ahijones-010",
+    "title": "Los Ahijones obtiene la simultaneidad para edificar en las etapas 3 y 4",
+    "date": "2025-12-10",
+    "source": "Los Ahijones",
+    "sourceType": "Administración",
+    "category": "Urbanismo",
+    "summary": "El Ayuntamiento concedió la resolución favorable que permite compatibilizar las obras de urbanización con el inicio de la edificación en las etapas 3 y 4 del desarrollo.",
+    "url": "https://www.ahijones.es/institucional/simultaneidad-etapas-3-y-4-los-ahijones/",
+    "importance": "high",
+    "relevance": "direct",
+    "new": true,
+    "tags": [
+      "Etapas 3 y 4",
+      "Simultaneidad",
+      "Urbanización",
+      "Edificación",
+      "Ayuntamiento de Madrid"
+    ]
+  },
+  {
+    "id": "ahijones-011",
+    "title": "Los Ahijones obtiene un nuevo impulso para la urbanización de sus siguientes etapas",
+    "date": "2025-12-10",
+    "source": "Los Ahijones",
+    "sourceType": "Urbanismo",
+    "category": "Urbanismo",
+    "summary": "La autorización de simultaneidad permite avanzar hacia la construcción de las etapas 3 y 4 mientras continúa el proceso de urbanización, acelerando la transformación del ámbito.",
+    "url": "https://www.ahijones.es/institucional/simultaneidad-etapas-3-y-4-los-ahijones/",
+    "importance": "medium",
+    "relevance": "direct",
+    "new": true,
+    "tags": [
+      "Urbanización",
+      "Etapas 3 y 4",
+      "Desarrollo urbanístico"
     ]
   }
 ]
