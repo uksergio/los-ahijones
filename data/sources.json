@@ -1,1 +1,92 @@
-
+[
+  {
+    "id": "ayuntamiento-madrid",
+    "name": "Ayuntamiento de Madrid",
+    "type": "Administración",
+    "category": "Urbanismo",
+    "active": true,
+    "priority": "high",
+    "description": "Información municipal, urbanística, obras, movilidad y servicios relacionados con Los Ahijones."
+  },
+  {
+    "id": "comunidad-madrid",
+    "name": "Comunidad de Madrid",
+    "type": "Administración",
+    "category": "Urbanismo",
+    "active": true,
+    "priority": "high",
+    "description": "Información autonómica sobre urbanismo, infraestructuras, transporte, vivienda y medio ambiente."
+  },
+  {
+    "id": "junta-compensacion-ahijones",
+    "name": "Junta de Compensación Los Ahijones",
+    "type": "Urbanismo",
+    "category": "Urbanismo",
+    "active": true,
+    "priority": "high",
+    "description": "Información relacionada directamente con la gestión y desarrollo del ámbito de Los Ahijones."
+  },
+  {
+    "id": "vive-ahijones",
+    "name": "Vive Ahijones",
+    "type": "Comunidad",
+    "category": "General",
+    "active": true,
+    "priority": "high",
+    "description": "Información y novedades de la comunidad relacionada con Los Ahijones."
+  },
+  {
+    "id": "crtm",
+    "name": "Consorcio Regional de Transportes de Madrid",
+    "type": "Transporte",
+    "category": "Transporte",
+    "active": true,
+    "priority": "high",
+    "description": "Información sobre transporte público, líneas, servicios y futuras conexiones."
+  },
+  {
+    "id": "metro-madrid",
+    "name": "Metro de Madrid",
+    "type": "Transporte",
+    "category": "Transporte",
+    "active": true,
+    "priority": "medium",
+    "description": "Información relacionada con Metro y posibles actuaciones o ampliaciones relevantes para el entorno."
+  },
+  {
+    "id": "emt-madrid",
+    "name": "EMT Madrid",
+    "type": "Transporte",
+    "category": "Transporte",
+    "active": true,
+    "priority": "medium",
+    "description": "Información sobre líneas de autobús y movilidad urbana."
+  },
+  {
+    "id": "urbanismo-madrid",
+    "name": "Urbanismo Madrid",
+    "type": "Urbanismo",
+    "category": "Urbanismo",
+    "active": true,
+    "priority": "high",
+    "description": "Información y documentación urbanística relacionada con el desarrollo."
+  },
+  {
+    "id": "promotores",
+    "name": "Promotores inmobiliarios",
+    "type": "Empresas",
+    "category": "Vivienda",
+    "active": true,
+    "priority": "medium",
+    "description": "Noticias sobre promociones, viviendas y proyectos inmobiliarios en Los Ahijones."
+  },
+  {
+    "id": "prensa",
+    "name": "Medios de comunicación",
+    "type": "Prensa",
+    "category": "General",
+    "active": true,
+    "priority": "medium",
+    "description": "Noticias publicadas en prensa y medios digitales sobre Los Ahijones."
+  }
+]
