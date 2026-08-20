@@ -17,7 +17,8 @@
         content="Información, actualidad y desarrollo de Los Ahijones, Madrid."
     >
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Version number forces browsers to load the latest CSS -->
+    <link rel="stylesheet" href="style.css?v=4">
 
 </head>
 
@@ -25,30 +26,25 @@
 <body>
 
 
-    <!-- =========================
-         HEADER
-    ========================== -->
+    <!-- HEADER -->
 
     <header class="site-header">
 
         <div class="header-inner">
 
-            <a
-                href="#"
-                class="logo"
-            >
+            <a href="./" class="logo">
 
-                <span class="logo-a">
+                <span class="logo-symbol">
                     A
                 </span>
 
-                <span class="logo-text">
+                <span class="logo-copy">
 
-                    <strong>
+                    <span class="logo-name">
                         LOS AHIJONES
-                    </strong>
+                    </span>
 
-                    <span>
+                    <span class="logo-radar">
                         RADAR
                     </span>
 
@@ -59,10 +55,7 @@
 
             <nav class="main-nav">
 
-                <a
-                    href="#"
-                    class="active"
-                >
+                <a href="./" class="active">
                     Inicio
                 </a>
 
@@ -70,12 +63,8 @@
                     Noticias
                 </a>
 
-                <a href="#">
-                    Fuentes
-                </a>
-
-                <a href="#">
-                    Mapa
+                <a href="#footer">
+                    Información
                 </a>
 
             </nav>
@@ -87,11 +76,11 @@
 
             <span>INFORMACIÓN</span>
 
-            <i></i>
+            <span class="brand-dot"></span>
 
             <span>ACTUALIDAD</span>
 
-            <i></i>
+            <span class="brand-dot"></span>
 
             <span>DESARROLLO</span>
 
@@ -101,9 +90,7 @@
 
 
 
-    <!-- =========================
-         MAIN
-    ========================== -->
+    <!-- MAIN -->
 
     <main class="main-container">
 
@@ -114,15 +101,15 @@
 
             <div class="intro-copy">
 
-                <p class="section-label">
+                <div class="section-label">
                     LOS AHIJONES · MADRID
-                </p>
+                </div>
 
                 <h1>
                     Últimas <span>novedades</span>
                 </h1>
 
-                <p class="intro-description">
+                <p>
                     Información publicada sobre el desarrollo
                     de Los Ahijones.
                 </p>
@@ -141,7 +128,7 @@
                 </div>
 
                 <div class="status-date">
-                    Actualización automática
+                    Archivo de información
                 </div>
 
             </div>
@@ -202,7 +189,7 @@
 
             <div class="search-box">
 
-                <span class="search-symbol">
+                <span class="search-icon">
                     ⌕
                 </span>
 
@@ -210,7 +197,7 @@
                     type="search"
                     id="search"
                     placeholder="Buscar en Los Ahijones..."
-                    aria-label="Buscar"
+                    aria-label="Buscar en Los Ahijones"
                 >
 
             </div>
@@ -218,7 +205,7 @@
 
             <select
                 id="category"
-                aria-label="Categoría"
+                aria-label="Filtrar por categoría"
             >
 
                 <option value="all">
@@ -268,6 +255,7 @@
         <section
             id="news-feed"
             class="news-feed"
+            aria-label="Noticias de Los Ahijones"
         >
 
         </section>
@@ -277,17 +265,18 @@
 
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
-    <footer class="site-footer">
+    <footer
+        id="footer"
+        class="site-footer"
+    >
 
         <div class="footer-inner">
 
-            <div class="footer-logo">
+            <div class="footer-brand">
 
-                <span class="logo-a small">
+                <span class="footer-symbol">
                     A
                 </span>
 
@@ -307,7 +296,9 @@
 
 
 
-    <script src="app.js"></script>
+    <!-- JavaScript -->
+
+    <script src="app.js?v=4"></script>
 
 </body>
 
